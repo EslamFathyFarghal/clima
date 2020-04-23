@@ -8,6 +8,7 @@
 
 
 import Foundation
+import CoreLocation
 
 protocol WeatherManagerDelegate {
     func didUpdateWeather (weatherData : WeatherModel)
@@ -25,6 +26,12 @@ class WeatherHelper {
         let u =  "\(url)&appid=\(apiKey)&q=\(city)"
         performRequest(url: u)
         
+    }
+    
+    func getWeather(latitude: CLLocationDegrees , longitude: CLLocationDegrees) {
+        let u =  "\(url)&appid=\(apiKey)&lat=\(latitude)&lon=\(longitude)"
+        print(u)
+        performRequest(url: u)
     }
     
     func performRequest(url :String) {
