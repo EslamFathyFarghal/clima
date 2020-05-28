@@ -22,3 +22,4 @@ in this chapter i learned to do :
 - Use Core Location to get the current location from the phone GPS. 
 
 
+This is a companion project to The App Brewery's Complete App Developement Bootcamp
